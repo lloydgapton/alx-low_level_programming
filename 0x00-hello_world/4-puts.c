@@ -6,7 +6,9 @@
  */
 int main(void)
 {
-	/* Using the Puts() function to printbthe desired output. */
+	/**
+ 	 *Using the Puts() function to printbthe desired output.
+   	 */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 	/**
