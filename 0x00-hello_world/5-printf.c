@@ -4,9 +4,9 @@
  (* section header: Section description)*
  * Return: Description of the returned value
  */
-int main(void)
+int main(void) 
 {
- printf("with proper grammar, but the outcome is a piece of art,\n");
- /* End the program with the value 0 */
- return (0);
+ printf("with proper grammar, but the outcome is a piece of art,\n")
+  /* End the program with the value 0 */
+  return (0);
 }
