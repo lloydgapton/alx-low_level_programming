@@ -1,7 +1,6 @@
 /* This program demonstrates the use of the puts function. */
 #include <stdio.h>
 /* This program demonstrates the use of the puts function. */
-/* This program demonstrates the use of the puts function. */
 /**
  * my_function - This is a description
  */
