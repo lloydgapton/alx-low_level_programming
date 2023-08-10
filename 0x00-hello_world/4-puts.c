@@ -1,8 +1,9 @@
 /* This program demonstrates the use of the puts function. */
 #include <stdio.h>
-/* The main function is the entry point if the program. */
+/**
+ * The main function is the entry point if the program.
+ */
 int main(void)
-/* It is where the execution of the program begins. */
 {
 	/* Using the Puts() function to printbthe desired output. */
 	puts("\"Programming is like building a multilingual puzzle");
