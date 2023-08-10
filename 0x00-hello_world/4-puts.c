@@ -1,6 +1,4 @@
-/**
- *This program demonstrates the use of the puts function.
- */
+/* This program demonstrates the use of the puts function. */
 #include <stdio.h>
 int main(void)
 {
