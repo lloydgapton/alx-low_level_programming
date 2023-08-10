@@ -1,8 +1,5 @@
 /* This program demonstrates the use of the puts function. */
 #include <stdio.h>
-/**
- * The main function is the entry point if the program.
- */
 /* This program demonstrates the use of the puts function. */
 int main(void)
 {
