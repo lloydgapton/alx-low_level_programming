@@ -2,6 +2,9 @@
 #include <stdio.h>
 /* This program demonstrates the use of the puts function. */
 /* This program demonstrates the use of the puts function. */
+/**
+ * my_function - This is a description
+ */
 int main(void)
 {
 	/* Using the Puts() function to printbthe desired output. */
