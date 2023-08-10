@@ -3,6 +3,7 @@
 /**
  * The main function is the entry point if the program.
  */
+/* This program demonstrates the use of the puts function. */
 int main(void)
 {
 	/* Using the Puts() function to printbthe desired output. */
