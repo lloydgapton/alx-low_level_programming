@@ -12,15 +12,15 @@ int main(void)
 	/* your code goes there */
 	if (n >= 1)
 	{
-		return (n " :is positive")
+		return (n " :is positive");
 	}
 	else if (n == 0)
 	{
-		return (n ": is zero")
+		return (n ": is zero");
 	}
 	else
 	{
-		return (n ": is negative")
+		return (n ": is negative");
 	}
 
 	return (0);
