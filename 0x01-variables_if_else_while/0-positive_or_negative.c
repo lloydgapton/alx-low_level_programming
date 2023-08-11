@@ -1,27 +1,25 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n >= 1)
+	printf("The number is %d: ", n);
+	if (n > 0)
 	{
-		printf (n " :is positive");
+		printf("is positive");
 	}
 	else if (n == 0)
 	{
-		printf(n ": is zero");
+		printf("is zero");
 	}
 	else
 	{
-		printf (n ": is negative");
+		printf("is negative");
 	}
-
+	printf("\n");
 	return (0);
 }
