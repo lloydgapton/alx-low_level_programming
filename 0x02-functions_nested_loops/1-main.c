@@ -1,7 +1,12 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-void print_alphabet(void);
-
-#endif /* MAIN_H */
-
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_alphabet();
+    return (0);
+}
