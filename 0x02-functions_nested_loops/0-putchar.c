@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <main.h>
+#include "main.h"
 /**
  *main - Short description, single line
  * Return: 0
