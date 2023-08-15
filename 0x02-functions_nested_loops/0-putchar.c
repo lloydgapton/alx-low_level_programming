@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include "main.h"
+#include <unistd.h>
+
 /**
  *main - Short description, single line
  * Return: 0
  */
-int main <void>
+int main(void)
 {
-	printf(_"putchar\n")
-	return(0)
+    write(1, "_putchar\n", 9);
+    return (0);
 }
 
