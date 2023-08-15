@@ -1,11 +1,19 @@
 #include "main.h"
 /**
- *main - Short description, single line
+ *main - print _putchar
  * Return: 0
  */
+
 int main(void)
 {
-    write(1, "_putchar\n", 9);
-    return (0);
-}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
+	return (0_;
+}
