@@ -7,7 +7,7 @@
  * @b: Number 2
  *
  * Return: Result between a * b
- */
+ **/
 
 int mul(int a, int b)
 {
