@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _isdigit - If is 0 to 9 return 1, if not return 0, function check a digit
+ * _isupper - If is uppercase return 1, if not return 0
  *
  * @c: this is the entry
  *
  * Return: 0
  *
  */
-int _isdigit(int c)
+int _isupper(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
