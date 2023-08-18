@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * _isupper - If is uppercase return 1, if not return 0
