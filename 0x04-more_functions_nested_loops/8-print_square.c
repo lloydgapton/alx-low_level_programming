@@ -10,7 +10,6 @@
 
 void print_square(int n)
 {
-
 	if (n > 0)
 	{
 		int replay;
@@ -21,11 +20,11 @@ void print_square(int n)
 			{
 				_putchar(35);
 			}
-		_putchar('\n');
+			_putchar('\n');
 		}
 	}
 	else
 	{
-	_putchar('\n');
+		_putchar('\n');
 	}
 }
