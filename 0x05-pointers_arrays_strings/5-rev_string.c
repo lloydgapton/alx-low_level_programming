@@ -7,7 +7,7 @@
 #include "main.h"
 #include <string.h>
 
-void rev_string(char *s);
+void rev_string(char *s)
 {
 	int length = strlne(s);
 	int start = 0;
