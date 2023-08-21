@@ -1,5 +1,6 @@
 /**
- * int_strlen - prints the length of a string.
+ * _strlen - prints the length of a string.
+ * @s: this is the entry.
  * Return: 0.
  */
 
@@ -9,7 +10,7 @@ int _strlen(char *s)
 {
 	int length = 0;
 
-	while(*s != '\0')
+	while (*s != '\0')
 	{
 		length++;
 		s++;
