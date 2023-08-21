@@ -7,5 +7,7 @@
 #include <string.h>
 int _strlen(char *s)
 {
-	int length = strlen(char *s);
+	int length;
+
+	length = strlen(char *s);
 }
