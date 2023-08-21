@@ -7,7 +7,7 @@
 #include "main.h"
 #include <string.h>
 
-void puts_half(char 8str)
+void puts_half(char *str)
 {
 	int length = strlen(str);
 	int start_index;
