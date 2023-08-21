@@ -7,10 +7,12 @@
 #include <string.h>
 int _strlen(char *s)
 {
-	int length;
+	int length = 0;
 
-	for (*s != '\0'; length++; s++)
+	while(*s != '\0')
 	{
-		return (length)
+		length++;
+		s++;
 	}
+	return (length);
 }
