@@ -12,9 +12,9 @@ void reset_to_98(int *n)
 
 int main(void)
 {
-	int num = 5;
+	int n = 5;
 
-	reset_to_98(&num);
+	reset_to_98(&n);
 
 	return (0);
 }
