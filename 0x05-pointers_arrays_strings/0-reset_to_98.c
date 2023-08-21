@@ -10,11 +10,11 @@ void reset_to_98(int *n)
 	*n = 98;
 }
 
-int main()
+int main(void)
 {
 	int num = 5;
 
 	reset_to_98(&num);
 
-	return 0;
+	return (0);
 }
