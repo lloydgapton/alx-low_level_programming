@@ -17,7 +17,7 @@ void generate_password(char *password, int length)
 
 	for (int i = 0; i < length; i++)
 	{
-		int random_inde = rand() % (sizeof(valid_chars) - 1);
+		int random_index = rand() % (sizeof(valid_chars) - 1);
 		password[i] = valid_chars[random_index];
 	}
 
