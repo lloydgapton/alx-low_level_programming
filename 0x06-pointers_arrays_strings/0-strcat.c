@@ -1,8 +1,8 @@
 /**
- * *_strcat - conactenates two strings
- * @*dest :this is the first entry.
- * @*src :this is the second entry
- * Return :Always 0
+ * _strcat - conactenates two strings
+ * @dest :this is the first entry.
+ * @src :this is the second entry
+ * Return:dest
  */
 
 #include <unistd.h>
@@ -12,7 +12,7 @@ char *_strcat(char *dest, char *src)
 {
 	char *result = dest;
 
-	while(*dest != '\0')
+	while (*dest != '\0')
 	{
 		dest++;
 	}
@@ -36,7 +36,7 @@ void _putchar(char c)
 
 void_puts(char *str)
 {
-	while(*str != '\0')
+	while (*str != '\0')
 	{
 		_putchar(*str);
 		str++;
