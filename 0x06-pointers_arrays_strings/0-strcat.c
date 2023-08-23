@@ -1,45 +1,24 @@
-/**
- * _strcat - conactenates two strings
- * _putchar - prints values
- * @dest :this is the first entry.
- * @src :this is the second entry
- * Return:dest
- */
-
-#include <unistd.h>
 #include "main.h"
+
+/**
+ *_strcat - Write a function that concatenates two strings.
+ *
+ *@dest: This is the output dest
+ *@src: This is the input source
+ *
+ * Return: This return to dest, that concatenates two strings
+ */
 
 char *_strcat(char *dest, char *src)
 {
-	char *result = dest;
+	int i, j;
 
-	while (*dest != '\0')
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+	for (j = 0; src[j] != '\0'; j++)
 	{
-		dest++;
+		dest[i] = src[j];
+		i++;
 	}
-
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-
-	*dest = '\0';
-
-	return (result);
-}
-
-void _putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void_puts(char *str)
-{
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		str++;
-	}
+	return (dest);
 }
