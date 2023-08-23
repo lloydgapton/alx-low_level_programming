@@ -1,5 +1,6 @@
 /**
  * _strcat - conactenates two strings
+ * _putchar -prints values
  * @dest :this is the first entry.
  * @src :this is the second entry
  * Return:dest
