@@ -4,7 +4,7 @@
  * Return : Always 0.
  */
 
-#include "main"
+#include "main.h"
 
 char *rot13(char *s)
 {
