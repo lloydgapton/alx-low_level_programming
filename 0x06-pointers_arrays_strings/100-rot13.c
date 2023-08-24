@@ -20,5 +20,5 @@ char *rot13(char *s)
 		}
 		p++;
 	}
-	return (s);
+	return(s);
 }
