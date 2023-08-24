@@ -21,7 +21,7 @@ void print_number(int n)
 }
 int main(void)
 {
-    int number = 12345;
+    int number = 98;
     print_number(number);
 
     _putchar('\n');
