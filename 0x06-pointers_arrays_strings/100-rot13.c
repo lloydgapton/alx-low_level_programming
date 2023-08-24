@@ -1,12 +1,13 @@
 /**
  * rot13 - encodes a string using rot 13.
  * @s : this is an entry
- * Return : Always 0.
+ * Return : rot13.
  */
 
 char *rot13(char *s)
 {
     char *p = s;
+
     while (*p) {
         if (*p >= 'a' && *p <= 'z') {
             *p = (*p - 'a' + 13) % 26 + 'a';
@@ -15,5 +16,5 @@ char *rot13(char *s)
         }
         p++;
     }
-    return s;
+    return (s);
 }
