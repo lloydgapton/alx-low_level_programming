@@ -1,10 +1,9 @@
-/**
+/*.
  * print_number - prints an integer
  * @n: this is an entry
  * Return : 0
  */
 
-#include "main.h"
 #include <unistd.h>
 
 int _putchar(char c) {
