@@ -1,3 +1,9 @@
+/**
+ * rot13 - encodes a string using rot 13.
+ * @s : this is an entry
+ * Return : Always 0.
+ */
+
 char *rot13(char *s)
 {
     char *p = s;
