@@ -19,3 +19,11 @@ void print_number(int n)
 
 	_putchar((num % 10) + '0');
 }
+int main(void)
+{
+    int number = 12345;
+    print_number(number);
+
+    _putchar('\n');
+    return 0;
+}
