@@ -9,17 +9,19 @@
 #include <stdlib.h>
 #include <time.h>
 
-void generate_password(char *password, int length)
+int main (void)
 {
-	const char valid_chars[] = "abcdefghijklmnopqrstuvwxyxABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	char c;
+	int x;
 
-	srand(time(NULL));
-
-	for (int i = 0; i < length; i++)
+	srand(time(0));
+	while (x <= 2645)
 	{
-		int random_index = rand() % (sizeof(valid_chars) - 1);
-		password[i] = valid_chars[random_index];
+		c = rand() % 128;
+		x += c;
+		putchar(c);
 	}
+	putchar(2772 - x);
 
-	password[length] = '\0';
+	return (0);
 }
