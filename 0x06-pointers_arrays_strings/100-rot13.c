@@ -3,6 +3,7 @@
  * @s: this is an entry
  * Return: address of s.
  */
+#include "main.h"
 
 char *rot13(char *s)
 {
