@@ -8,27 +8,31 @@
  */
 #include "main.h"
 
-unsigned int _strspn(char *s, char *accept) {
-    unsigned int count = 0;
-    int is_accept = 1;
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int count = 0;
+	int is_accept = 1;
 
-    while (*s && is_accept) {
-        char *a = accept;
-        is_accept = 0;
+	while (*s && is_accept)
+	{
+		char *a = accept;
 
-        while (*a) {
-            if (*s == *a) {
-                is_accept = 1;
-                break;
-            }
-            a++;
-        }
+		is_accept = 0;
 
-        if (is_accept) {
-            count++;
-            s++;
-        }
-    }
-
-    return (count);
+		while (*a)
+		{
+			if (*s == *a)
+			{
+				is_accept = 1;
+				break;
+			}
+			a++;
+		}
+		if (is_accept)
+		{
+			count++;
+			s++;
+		}
+	}
+	return (count);
 }
