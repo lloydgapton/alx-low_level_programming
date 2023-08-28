@@ -5,16 +5,18 @@
  *
  */
 #include "main.h"
-void _putchar(char c); // Declaration of _putchar function
+void _putchar(char c); 
 
-void print_chessboard(char (*a)[8]) {
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            char piece = a[i][j];
-            _putchar(piece);
-          
-            _putchar(' ');
-        }
-        _putchar('\n');
-    }
+void print_chessboard(char (*a)[8])
+{
+	int count, index;
+
+	for (count = 0; count < 8; count++)
+	{
+		for (index = 0; index < 8; index++)
+		{
+			_putchar(a[count][index]);
+		}
+		_putchar('\n');
+	}
 }
