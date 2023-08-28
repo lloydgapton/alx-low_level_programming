@@ -16,11 +16,11 @@ char *_strpbrk(char *s, char *accept) {
         char *a = accept;
         while (*a) {
             if (*s == *a) {
-                return s; // Return pointer to the matching byte in s
+                return s;
             }
             a++;
         }
         s++;
     }
-    return NULL; // Return NULL if no match is found
+    return NULL;
 }
