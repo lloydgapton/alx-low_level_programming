@@ -5,16 +5,19 @@
  * @size: This is the length of the array
  */
 #include "main.h"
-void print_diagsums(int *a, int size) {
-    int sum_main_diag = 0;
-    int sum_secondary_diag = 0;
-  
-    for (int i = 0; i < size; i++) {
-        sum_main_diag += *(a + i * size + i);
-        sum_secondary_diag += *(a + i * size + (size - 1 - i));
-    }
-    int_to_screen(sum_main_diag);
-    int_to_screen(' ');
-    int_to_screen(sum_secondary_diag);
-    int_to_screen('\n');
+void print_diagsums(int *a, int size)
+{
+	int ascedent, descendet, i, sumAscedent, sumDescedent;
+
+	sumAscedent = sumDescedent = 0;
+	ascedent = 0;
+	descendet = size - 1;
+	for (i = 0; i < size; i++)
+	{
+		sumAscedent += *(a + i * size + ascedent);
+		sumDescedent += *(a + i * size + descendet);
+		ascedent += 1;
+		descendet -= 1;
+	}
+	printf("%d, %d\n", sumAscedent, sumDescedent);
 }
