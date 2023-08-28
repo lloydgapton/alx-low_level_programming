@@ -9,27 +9,21 @@
  */
 #include "main.h"
   
-char *_strstr(char *haystack, char *needle) {
-    while (*haystack) {
-        char *h = haystack;
-        char *n = needle;
-        int match = 1;
 
-        while (*n) {
-            if (*h != *n) {
-                match = 0;
-                break;
-            }
-            h++;
-            n++;
-        }
+char *_strstr(char *haystack, char *needle)
+{
+	while (*haystack)
+	{
+		char *temp;
 
-        if (match) {
-            return haystack;
-        }
-
-        haystack++;
-    }
-
-    return NULL; 
+		temp = haystack;
+		while (*needle == *haystack)
+		{
+			haystack++, needle++;
+		}
+		if (*needle == '\0')
+			return (temp);
+		haystack++;
+	}
+	return (0);
 }
