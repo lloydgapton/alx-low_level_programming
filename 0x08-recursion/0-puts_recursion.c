@@ -1,32 +1,19 @@
 #include "main.h"
 /**
- * _strspn - Function that gets the length of a prefix substring
- * @s: This is the string literal
- * @accept: This is the second string
+ * _puts_recursion - Write a function that prints a string, followed by a new
+ * line.
  *
- * Return: number of bytes in the initial segment of s which consist only of
- * bytes from accept
+ * @s: This is the input string
  */
 
-unsigned int _strspn(char *s, char *accept)
+void _puts_recursion(char *s)
 {
-	unsigned int index, j, counter;
-
-	counter = 0;
-	for (index = 0; s[index] != '\0'; index++)
+	if (*s == '\0')
 	{
-		for (j = 0; accept[j] != '\0'; j++)
-		{
-			if (accept[j] == s[index])
-			{
-				counter++;
-				break;
-			}
-		}
-		if (accept[j] != s[index])
-		{
-		break;
-		}
+		_putchar('\n');
+		return;
 	}
-	return (counter);
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
