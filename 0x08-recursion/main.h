@@ -1,6 +1,9 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-
+int wildcmp(char *s1, char *s2);
+int _sqrt(int n, int x);
+int is_prime(int n, int x);
+int check_palindrome(char *s, int len, int index);
 int _strlen_recursion(char *s);
 int factorial(int n);
 int _pow_recursion(int x, int y);
