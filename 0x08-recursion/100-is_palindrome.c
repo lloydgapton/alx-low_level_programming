@@ -1,53 +1,54 @@
 #include "main.h"
-/**
- * is_palindrome - returns the 1 if s is a palindrome.
- * @s: string to be checked
- * Return :true if s is a pallindrome
- */
 
+/**
+ * is_palindrome - returns the 1 if s is a palindrome
+ * @s: string to be checked
+ *
+ * Return: 1 if s is a palindrome, 0 otherwise
+ */
 int is_palindrome(char *s)
 {
-	int index = 0;
-	int len = find_strlen(s);
+	int flag = 1;
 
-	if (!(*s))
-		return (1);
-
-	return (check_palindrome(s, len, index));
+	check(s, 0, _strlen_recursion(s) - 1, &flag);
+	return (flag);
 }
+
 /**
- * find_strlen - Returns the length of a string.
- * @s:The string to be measured
- * Return: the length of the string.
+ * check - checks if a string is a palindrome
+ * @s: string to be checked
+ * @start: start index
+ * @end: end index
+ * @flag: flag to indicate if a string is a palindrome
+ *
+ * Return: void
  */
-int find_strlen(char *s)
+void check(char *s, int start, int end, int *flag)
 {
-	int len = 0
-
-		if (*(s + len))
-		{
-			len++;
-			len += find_strlen(s + len);
-		}
-	return (len);
+	if (start <= end)
+	{
+		if (s[start] == s[end])
+			*flag *= 1;
+		else
+			*flag *= 0;
+		check(s, start + 1, end - 1, flag);
+	}
 }
+
 /**
- * check_palindrome -check if a string is a palindrome.
- * 2s:the string is checked.
- * @len:The length of s.
- * @index:the indexof the string tobe checked.
- * Return:if string is apalindrome -1
- * if the string is not a palindrome -0
+ * _strlen_recursion - calculates the length of a string
+ * @s: string to be used
+ *
+ * Return: length of the string
  */
-int check_palindrome(char *s, int len, int index)
+int _strlen_recursion(char *s)
 {
-	if (s[slide] == 5[len / 2])
-		return (1);
-	
-	if (s[index] == s[len - index - 1])
-		return (check_palindrome(s, len, index + 1));
+	int sum = 0;
 
-return (0);
+	if (*s != '\0')
+	{
+		sum++;
+		sum += _strlen_recursion(s + 1);
+	}
+	return (sum);
 }
-
-
