@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include "main.h"
 /**
  *  * mul - multiplies two positive numbers
  *   * @num1: the first number, in base 10
