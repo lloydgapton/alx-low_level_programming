@@ -1,97 +1,200 @@
 #include "main.h"
+		
 #include <stdlib.h>
-#include <ctype.h>
+		
 #include <stdio.h>
+		
 
+		
+#define ERR_MSG "Error"
+		
+
+		
 /**
-  *length - function to check
-  *if string contains only numbers
-  *@str: constant string
-  *
-  *Return: 1 if true else 0
-  */
-int length(const char *str)
+		
+ * is_digit - checks if a string contains a non-digit char
+		
+ * @s: string to be evaluated
+		
+ *
+		
+ * Return: 0 if a non-digit is found, 1 otherwise
+		
+ */
+		
+int is_digit(char *s)
+		
 {
-	int i;
+		
+	int i = 0;
+		
 
-	i = 0;
-	while (*str++)
+		
+	while (s[i])
+		
 	{
+		
+		if (s[i] < '0' || s[i] > '9')
+		
+			return (0);
+		
 		i++;
+		
 	}
+		
+	return (1);
+		
+}
+		
+
+		
+/**
+		
+ * _strlen - returns the length of a string
+		
+ * @s: string to evaluate
+		
+ *
+		
+ * Return: the length of the string
+		
+ */
+		
+int _strlen(char *s)
+		
+{
+		
+	int i = 0;
+		
+
+		
+	while (s[i] != '\0')
+		
+	{
+		
+		i++;
+		
+	}
+		
 	return (i);
+		
 }
+		
 
+		
 /**
-  *array - create an array
-  *@size: size of array
-  *
-  *Return: pointer to array
-  */
-
-char *array(int size)
+		
+ * errors - handles errors for main
+		
+ */
+		
+void errors(void)
+		
 {
-	char *arr;
-	int index;
-
-	arr = malloc(sizeof(char) * size);
-	if (arr == NULL)
-		exit(98);
-	for (index = 0; index < (size - 1); index++)
-		arr[index] = 'x';
-	arr[index] = '\0';
-	return (arr);
+		
+	printf("Error\n");
+		
+	exit(98);
+		
 }
+		
 
+		
 /**
-  *iterate_zeros - checks for characters which have leading zeros
-  *@str: string being checked
-  *
-  *Return: pointer
-  */
-
-char *iterate_zeros(char *str)
-{
-	while (*str && *str == '0')
-		str++;
-	return (str);
-}
-
-/**
-  *
-  */
-
-
-
-/**
-  * main - entry point
-  * @argc: arguement count
-  * @argv: arguement array / vector
-  *
-  *Return: product of arguements passed
-  */
-
+		
+ * main - multiplies two positive numbers
+		
+ * @argc: number of arguments
+		
+ * @argv: array of arguments
+		
+ *
+		
+ * Return: always 0 (Success)
+		
+ */
+		
 int main(int argc, char *argv[])
+		
 {
-	unsigned long long mul, num1, num2;
-	char *num1_str, *num2_str;
+		
+	char *s1, *s2;
+		
+	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
+		
 
-	if (argc != 3)
+		
+	s1 = argv[1], s2 = argv[2];
+		
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+		
+		errors();
+		
+	len1 = _strlen(s1);
+		
+	len2 = _strlen(s2);
+		
+	len = len1 + len2 + 1;
+		
+	result = malloc(sizeof(int) * len);
+		
+	if (!result)
+		
+		return (1);
+		
+	for (i = 0; i <= len1 + len2; i++)
+		
+		result[i] = 0;
+		
+	for (len1 = len1 - 1; len1 >= 0; len1--)
+		
 	{
-		printf("Error\n");
-		exit(98);
+		
+		digit1 = s1[len1] - '0';
+		
+		carry = 0;
+		
+		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		
+		{
+		
+			digit2 = s2[len2] - '0';
+		
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+		
+			result[len1 + len2 + 1] = carry % 10;
+		
+			carry /= 10;
+		
+		}
+		
+		if (carry > 0)
+		
+			result[len1 + len2 + 1] += carry;
+		
 	}
-	num1_str = argv[1];
-	num2_str = argv[2];
-	if (!valid_number(num1_str) || !valid_number(num2_str))
+		
+	for (i = 0; i < len - 1; i++)
+		
 	{
-		printf("Error\n");
-		exit(98);
+		
+		if (result[i])
+		
+			a = 1;
+		
+		if (a)
+		
+			_putchar(result[i] + '0');
+		
 	}
-	num1 = strtoull(num1_str, NULL, 10);
-	num2 = strtoull(num2_str, NULL, 10);
-	mul = MUL(num1, num2);
-	printf("%lld", mul);
+		
+	if (!a)
+		
+		_putchar('0');
+		
 	_putchar('\n');
+		
+	free(result);
+		
 	return (0);
-}
+		
