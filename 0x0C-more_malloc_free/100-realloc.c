@@ -2,11 +2,10 @@
 #include <stdlib.h>
 /**
  * _realloc - function that creates an array of integers.
- * ptr - function 
  *
  * @old_size: This is the range min to allocate in the memory
  * @new_size: This is my range max to allocate in the memory
- *
+ * @ptr : This is a parameter
  * Return: The pointer to the newly created array
  *         If min > max, return NULL
  *         If malloc fails, return NULL
