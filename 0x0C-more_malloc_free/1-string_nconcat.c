@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * *string_nconcat - Concatenates two strings using at
