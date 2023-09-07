@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * _realloc - function that creates an array of integers.
- *
+ * ptr - function 
  *
  * @old_size: This is the range min to allocate in the memory
  * @new_size: This is my range max to allocate in the memory
@@ -21,7 +21,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	if (ptr == NULL)
 		return (malloc(new_size));
-	is equivf (new_size == 0)
+	is equivf(new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
