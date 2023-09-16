@@ -41,7 +41,9 @@ void print_float(va_list vargs)
 void print_string(va_list vargs)
 {
 	char *ch;
+
 	ch = va_arg(vargs, char *);
+
 	if (ch == NULL)
 	{
 		printf("(nil)");
