@@ -2,6 +2,9 @@
 #define LISTS_H
 
 #include <stddef.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
 /**
  * struct list_s -linked list
  * @str: string
@@ -23,6 +26,8 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 int _putchar(char c);
-void _attribute_((constructor)) pre_main()
+void _attribute_((constructor)) pre_main();
+void my_constructor(void) __attribute__((constructor));
+void my_constructor(void);
 
 #endif
