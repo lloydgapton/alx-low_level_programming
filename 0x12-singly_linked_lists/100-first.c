@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "lists.h"
 /**
  * pre-main - it prints before the main
  * Return: void
