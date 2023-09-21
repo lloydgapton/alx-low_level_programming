@@ -9,7 +9,7 @@ int _strlen(const char *s)
 {
 	int i;
 
-	for (x = 0; s[i]; i++)
+	for (i = 0; s[i]; i++)
 		;
 	return (i);
 }
