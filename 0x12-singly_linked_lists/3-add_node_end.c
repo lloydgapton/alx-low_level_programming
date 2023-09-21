@@ -19,7 +19,7 @@ unsigned int stringlen(const char *str)
 }
 
 /**
- * add-node_end - adds new node to the nd of a linked list
+ * add_node_end - adds new node to the nd of a linked list
  * @head: pointer to the head of a list
  * @str: string added to the sting field of the structure
  * Return: the address of the new element or NULL if failed
