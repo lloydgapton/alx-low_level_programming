@@ -1,16 +1,14 @@
-section .data
-    hello db "Hello, Holberton",10,0  ; The string to print, followed by a newline and null terminator
+		global	main
 
-section .text
-    global main
+		section	.text
+main:	mov	rax, 1
+		mov	rdi, 1
+		mov	rsi, holberton
+		mov	rdx, 17
+		syscall
+		mov	rax, 60
+		xor	rdi, rdi
+		syscall
 
-extern printf
-
-main:
-    mov rdi, hello  ; Load the address of the string into rdi (1st argument for printf)
-    call printf     ; Call the printf function
-
-    ; Exit the program
-    mov rax, 60     ; syscall number for exit
-    xor rdi, rdi    ; exit status 0
-    syscall
+		section	.data
+holberton:db	"Hello, Holberton", 10
