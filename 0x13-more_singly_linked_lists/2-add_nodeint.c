@@ -5,7 +5,7 @@
  * add_nodeint - adds a node to the beginning of a list
  * @head: a pointer to a pointer to a linked list
  * @n: holds the data
- * Return: a pointer 
+ * Return: a pointer
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
