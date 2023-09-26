@@ -6,7 +6,7 @@
  * @n: integer
  * Return: nodes
  */
-listrint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i = 0;
 	listint_t *node, *node_temporal;
@@ -33,7 +33,7 @@ listrint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 				node = malloc(sizeof(listint_t));
 				if (!node)
 					return (NULL);
-				NODE->n = n;
+				node->n = n;
 				node->next = node_temporal->next;
 				node_temporal->next = node;
 				return (node);
