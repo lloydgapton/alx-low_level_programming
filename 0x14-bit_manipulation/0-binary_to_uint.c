@@ -5,7 +5,7 @@
  * Return: number
  */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int bit = 0;
 	while (b && *b)
