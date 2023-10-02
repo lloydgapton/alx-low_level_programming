@@ -5,7 +5,7 @@
  * @letters: no of letters to read and print
  * Return: the no of letters to read and ptint
  */
-ssize_t read_textfile(conts char *filename,  size_t letters)
+ssize_t read_textfile(const char *filename,  size_t letters)
 {
 	int filetxt;
 	ssize_t nrd, nwr;
