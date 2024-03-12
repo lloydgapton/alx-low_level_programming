@@ -12,72 +12,27 @@
  *          If value is not present in array or if array is NULL,
  *          your function must return -1
  */
-int jumpSearch(int array[], int x, int n)
-{
-    // Finding block size to be jumped
-    int step = sqrt(n);
- 
-    // Finding the block where element is
-    // present (if it is present)
-    int prev = 0;
-    while (array[min(step, n)-1] < x)
-    {
-        prev = step;
-        step += sqrt(n);
-        if (prev >= n)
-            return -1;
-    }
- 
-    // Doing a linear search for x in block
-    // beginning with prev.
-    while (array[prev] < x)
-    {
-        prev++;
- 
-        // If we reached next block or end of
-        // arrayay, element is not present.
-        if (prev == min(step, n))
-            return -1;
-    }
-    // If element is found
-    if (array[prev] == x)
-        return prev;
- 
-    return -1;
-}
-
-/*
 int jump_search(int *array, size_t size, int value)
 {
-	size_t low = 0, high = sqrt(size);
+	size_t i, jump, step;
 
 	if (array == NULL || size == 0)
 		return (-1);
-	while (high < size || low < size)
+
+	step = sqrt(size);
+	for (i = jump = 0; jump < size && array[jump] < value;)
 	{
-		printf("Value checked array[%li] = [%d]\n", low, array[low]);
-		if (value <= array[high] || high > (size - 1))
-		{
-			printf("Value found between indexes [%li] and [%li]\n",
-				low, high);
-			while ((array[low] <= value) && (low < size && low <= high))
-			{
-				printf("Value1 checked array[%li] = [%d]\n", low,
-					array[low]);
-				if (array[low] == value)
-					return (low);
-				low++;
-			}
-			while (array[low] > value && low < size)
-			{
-				printf("Value checked array[%li] = [%d]\n", low,
-					array[low]);
-				low++;
-			}
-			return (-1);
-		}
-		low = high;
-		high = high + sqrt(size);
+		printf("Value checked array[%ld] = [%d]\n", jump, array[jump]);
+		i = jump;
+		jump += step;
 	}
-	return (-1);
-}*/
+
+	printf("Value found between indexes [%ld] and [%ld]\n", i, jump);
+
+	jump = jump < size - 1 ? jump : size - 1;
+	for (; i < jump && array[i] < value; i++)
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+	printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+
+	return (array[i] == value ? (int)i : -1);
+}
